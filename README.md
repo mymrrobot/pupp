@@ -1,4 +1,4 @@
-# pupp
+# PupP
 PupP is a password list generator.
 
 Usage:
