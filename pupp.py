@@ -38,7 +38,6 @@ def do_product():
 
 def write_to_file(outputfile, keywords):
 
-
     with open(outputfile, 'w') as f:
         for passwords in do_product():
             f.write('\n'.join(passwords) + '\n')
@@ -56,7 +55,7 @@ parser = argparse.ArgumentParser()
 
 if __name__ == '__main__':
     parser.add_argument("-o", "--outputfile", required=True, help="The file that the password list will be written to.")
-    parser.add_argument("keywords", type=str, nargs="*", help="Keywords are computed by permutations and product. Supply at least one")
+    parser.add_argument("keywords", type=str, nargs="*", help="Keywords are computed by permutations and product. Supply at least one keyword.")
     args = parser.parse_args()
 
     keywords = ' '.join(args.keywords[0:])
